@@ -9,15 +9,15 @@ import './style.css'
 
 function Entrada () {
     const [itemsList, setItemsList] = useState([]);
-    
+
     useEffect(
         ()=>{
             async function loadData(){
-                try {  
+                try {
                     const { data, error } = await supabase
                     .from('tb_todos')
                     .select(`todo`)
-                        
+
                     if (error) {
                         throw error
                     }
@@ -36,7 +36,7 @@ function Entrada () {
             loadData();
         },[]);
 
-    function handleAddItemToList(newItem) {   // <------------ 
+    function handleAddItemToList(newItem) {   // <------------
         setItemsList([...itemsList, newItem])
       }
 
@@ -50,8 +50,8 @@ function Entrada () {
             ]
         );
         async function remove(){
-            try { 
-                const {data, error } = await supabase
+            try {
+                const { error } = await supabase
                 .from('tb_todos')
                 .delete()
                 .match({ todo: item })
