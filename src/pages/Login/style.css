@@ -1,0 +1,31 @@
+body{
+    background-color: #F6F3F3;
+}
+
+.central-container{
+    margin: 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #BE2E2E;
+    margin: 100px auto;
+    width: 440px;
+    height: 280px;
+    background-color: white;
+}
+
+.button-submit{
+    width: 378px;
+    background-color: #BE2E2E;
+    color: white;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 30px;
+}
